@@ -1,12 +1,12 @@
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
-  location = "West Europe"
+resource "azurerm_resource_group" "ravi" {
+  name     = "demo"
+  location = "eastus"
 }
 
-resource "azurerm_storage_account" "example" {
+resource "azurerm_storage_account" "storageaccountname" {
   name                     = "storageaccountname"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
+  resource_group_name      = "demo"
+  location                 = "eastus"
   account_tier             = "Standard"
   account_replication_type = "GRS"
 
